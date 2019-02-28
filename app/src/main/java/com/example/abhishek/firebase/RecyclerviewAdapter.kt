@@ -29,10 +29,10 @@ class RecyclerviewAdapter(private val pojolist: List<Pojo>,val context: Context)
     override fun onBindViewHolder(holder: RecyclerviewAdapter.ViewHolder, position: Int)
     {
 
-        holder.feed_f_name.text = (pojolist[position].first_name)
-        holder.feed_l_name.text = (pojolist[position].last_name)
-        holder.feed_bod.text = (pojolist[position].birth_date)
-        holder.emial_recy.text = (pojolist[position].email)
+        holder.feed_f_name.text = (pojolist[position].getFirstname())
+        holder.feed_l_name.text = (pojolist[position].getLastname())
+        holder.feed_bod.text = (pojolist[position].getBirthday())
+        holder.emial_recy.text = (pojolist[position].getEmail())
 
     }
 

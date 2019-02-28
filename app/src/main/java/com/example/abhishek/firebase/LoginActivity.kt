@@ -23,6 +23,8 @@ class LoginActivity : AppCompatActivity()
     private lateinit var input_layout_email: TextInputLayout;
     private lateinit var input_layout_password: TextInputLayout;
 
+
+
     public val url = "http://192.168.0.32:8080/login"
 
     override fun onCreate(savedInstanceState: Bundle?)
