@@ -1,7 +1,11 @@
-package com.example.abhishek.firebase.Retrofit
+package com.example.abhishek.firebase.Object
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import com.google.gson.GsonBuilder
+import com.google.gson.Gson
+
+
 
 
 object RetrofitClient

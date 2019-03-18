@@ -1,4 +1,4 @@
-package com.example.abhishek.firebase
+package com.example.abhishek.firebase.Adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -6,12 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import com.example.abhishek.firebase.ModelClass.Pojo
+import com.example.abhishek.firebase.R
 import de.hdodenhof.circleimageview.CircleImageView
 
-class RecyclerviewAdapter(private val pojolist: List<Pojo>,val context: Context) : RecyclerView.Adapter<RecyclerviewAdapter.ViewHolder>()
+class RecyclerviewAdapter(private val pojolist: List<Pojo>, val context: Context) : RecyclerView.Adapter<RecyclerviewAdapter.ViewHolder>()
 {
 
-    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): RecyclerviewAdapter.ViewHolder
+    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder
     {
 
         val view = LayoutInflater.from(context).inflate(R.layout.feed_recyclerview, viewGroup, false)
@@ -26,7 +28,7 @@ class RecyclerviewAdapter(private val pojolist: List<Pojo>,val context: Context)
 
     }
 
-    override fun onBindViewHolder(holder: RecyclerviewAdapter.ViewHolder, position: Int)
+    override fun onBindViewHolder(holder: ViewHolder, position: Int)
     {
 
         holder.feed_f_name.text = (pojolist[position].getFirstname())
